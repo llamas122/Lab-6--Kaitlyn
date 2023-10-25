@@ -1,16 +1,17 @@
-# This is a sample Python script.
+def decode(password):
+    new_password = ''
+    for char in password:
+        if int(char) > 2:
+            char = int(char) - 3
+            new_password = new_password + str(char)
+        elif int(char) == 2:
+            char = 9
+            new_password = new_password + str(char)
+        elif int(char) == 1:
+            char = 8
+            new_password = new_password + str(char)
+        else:
+            char = 9
+            new_password = new_password + str(char)
+    return new_password
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

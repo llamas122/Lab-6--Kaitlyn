@@ -1,3 +1,21 @@
+def decode(password):
+    new_password = ''
+    for char in password:
+        if int(char) > 2:
+            char = int(char) - 3
+            new_password = new_password + str(char)
+        elif int(char) == 2:
+            char = 9
+            new_password = new_password + str(char)
+        elif int(char) == 1:
+            char = 8
+            new_password = new_password + str(char)
+        else:
+            char = 9
+            new_password = new_password + str(char)
+    return new_password
+
+
 def encode_password(password):
     encoded_password = ""
     for num in password:
@@ -22,6 +40,7 @@ def main():
         print("Menu")
         print('-' * 13)
 
+
         print("1. Encode\n2. Decode\n3. Quit")
         print()
 
@@ -35,7 +54,6 @@ def main():
         # elif option == 2:
         elif option == 3:
             break
-
 
 if __name__ == "__main__":
     main()
